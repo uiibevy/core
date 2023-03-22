@@ -21,13 +21,6 @@
     }
   ],
   "minimum-stability": "stable",
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Uiibevy\\Core\\CoreServiceProvider"
-      ]
-    }
-  },
   "config": {
     "allow-plugins": {
       "pestphp/pest-plugin": false
