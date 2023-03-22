@@ -1,0 +1,36 @@
+{
+  "name": "uiibevy/core",
+  "description": "A Laravel Core package, to make coding easier. Contains all Laravel Utilities for package development, and makes integration easier.",
+  "type": "library",
+  "require": {
+    "laravel/framework": "^10.4"
+  },
+  "require-dev": {
+    "pestphp/pest": "^2.2"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Uiibevy\\Core\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Hicham SADDEK",
+      "email": "hicham.saddek@soprasteria.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Uiibevy\\Core\\CoreServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": false
+    }
+  }
+}

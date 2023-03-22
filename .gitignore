@@ -1,0 +1,14 @@
+.idea/
+.git/
+vendor/
+composer.lock
+node_modules/
+npm-debug.log
+yarn-error.log
+yarnd.lock
+yarn.lock
+.env
+.env.local
+.env.*.local
+.env.*
+!.env.example
