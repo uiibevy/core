@@ -4,7 +4,7 @@ namespace Uiibevy\Core\Concerns;
 
 trait AutomaticCoreService
 {
-    protected static string $abstract;
+    public static string $abstract = self::class;
 
     /**
      * Register a service
