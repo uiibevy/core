@@ -3,10 +3,10 @@
 namespace Uiibevy\Core\Services;
 
 use Uiibevy\Core\Concerns\AutomaticCoreService;
-use Uiibevy\Core\Concerns\BaseServiceContract;
-use Uiibevy\Core\Concerns\ServiceContract;
 use Uiibevy\Core\Concerns\ServiceModelBind;
 use Uiibevy\Core\Concerns\ServiceQueries;
+use Uiibevy\Core\Contracts\BaseServiceContract;
+use Uiibevy\Core\Contracts\ServiceContract;
 
 class Service implements ServiceContract, BaseServiceContract
 {

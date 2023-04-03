@@ -2,6 +2,8 @@
 
 namespace Uiibevy\Core\Concerns;
 
+use Uiibevy\Core\Contracts\ServiceContract;
+
 trait AutomaticCoreService
 {
     public static string $abstract = self::class;
