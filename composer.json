@@ -3,7 +3,7 @@
   "description": "A Laravel Core package, to make coding easier. Contains all Laravel Utilities for package development, and makes integration easier.",
   "type": "library",
   "require": {
-    "laravel/framework": "^10.4"
+    "laravel/framework": "^8.83|^9.52|^10.5"
   },
   "require-dev": {
     "pestphp/pest": "^2.2"
