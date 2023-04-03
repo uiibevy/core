@@ -1,6 +1,6 @@
 <?php
 
-namespace Uiibevy\Core\Concerns;
+namespace Uiibevy\Core\Contracts;
 
 interface BaseServiceContract
 {
@@ -16,7 +16,7 @@ interface BaseServiceContract
     /**
      * Autoload a service
      *
-     * @return \Uiibevy\Core\Concerns\ServiceContract
+     * @return \Uiibevy\Core\Contracts\ServiceContract
      *
      */
     public static function autoload(): ServiceContract;

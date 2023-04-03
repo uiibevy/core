@@ -4,10 +4,11 @@ namespace Uiibevy\Core\Concerns;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Uiibevy\Core\Contracts\ServiceableModelContract;
 use Uiibevy\Core\Exceptions\BadModelClassImplementationException;
 
 /**
- * @mixin \Uiibevy\Core\Concerns\ServiceContract
+ * @mixin \Uiibevy\Core\Contracts\ServiceContract
  */
 trait ServiceModelBind
 {
@@ -23,7 +24,7 @@ trait ServiceModelBind
     /**
      * @param ...$attributes
      *
-     * @return \Illuminate\Database\Eloquent\Model|\Uiibevy\Core\Concerns\ServiceableModelContract
+     * @return \Illuminate\Database\Eloquent\Model|\Uiibevy\Core\Contracts\ServiceableModelContract
      * @throws \Uiibevy\Core\Exceptions\BadModelClassImplementationException
      */
     public function newModelInstance(...$attributes): Model|ServiceableModelContract

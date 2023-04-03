@@ -4,11 +4,12 @@ namespace Uiibevy\Core\Concerns;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
+use UiiBevy\Core\Contracts\ServiceableModelContract;
 use Uiibevy\Core\Exceptions\BadModelClassImplementationException;
 
 /**
- * @mixin \Uiibevy\Core\Concerns\ServiceContract
- * @mixin \Uiibevy\Core\Concerns\BaseServiceContract
+ * @mixin \Uiibevy\Core\Contracts\ServiceContract
+ * @mixin \Uiibevy\Core\Contracts\BaseServiceContract
  */
 trait ServiceQueries
 {
@@ -21,7 +22,7 @@ trait ServiceQueries
     {
         try {
             return $this->query()->where('id', $id)->exists();
-        } catch (BadModelClassImplementationException $e) {
+        } catch (BadModelClassImplementationException) {
             return false;
         }
     }
@@ -33,7 +34,7 @@ trait ServiceQueries
     {
         try {
             return $this->query()->get();
-        } catch (BadModelClassImplementationException $e) {
+        } catch (BadModelClassImplementationException) {
             return collect();
         }
     }
@@ -41,13 +42,13 @@ trait ServiceQueries
     /**
      * @param array $attributes
      *
-     * @return \Illuminate\Database\Eloquent\Model|\Uiibevy\Core\Concerns\ServiceableModelContract|null
+     * @return \Illuminate\Database\Eloquent\Model|\Uiibevy\Core\Contracts\ServiceableModelContract|null
      */
     public function create(array $attributes): Model|ServiceableModelContract|null
     {
         try {
             return $this->query()->create($attributes);
-        } catch (BadModelClassImplementationException $e) {
+        } catch (BadModelClassImplementationException) {
             return null;
         }
     }
@@ -56,7 +57,7 @@ trait ServiceQueries
      * @param int|string $id
      * @param array      $attributes
      *
-     * @return \Illuminate\Database\Eloquent\Model|\Uiibevy\Core\Concerns\ServiceableModelContract|null
+     * @return \Illuminate\Database\Eloquent\Model|\Uiibevy\Core\Contracts\ServiceableModelContract|null
      */
     public function update(int|string $id, array $attributes): Model|ServiceableModelContract|null
     {
@@ -68,13 +69,13 @@ trait ServiceQueries
     /**
      * @param int|string $id
      *
-     * @return \Illuminate\Database\Eloquent\Model|\Uiibevy\Core\Concerns\ServiceableModelContract|null
+     * @return \Illuminate\Database\Eloquent\Model|\Uiibevy\Core\Contracts\ServiceableModelContract|null
      */
     public function find(int|string $id): Model|ServiceableModelContract|null
     {
         try {
             return $this->query()->find($id);
-        } catch (BadModelClassImplementationException $e) {
+        } catch (BadModelClassImplementationException) {
             return null;
         }
     }

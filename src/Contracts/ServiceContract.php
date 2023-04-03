@@ -1,6 +1,6 @@
 <?php
 
-namespace Uiibevy\Core\Concerns;
+namespace Uiibevy\Core\Contracts;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
@@ -14,7 +14,7 @@ interface ServiceContract
     public static function guessModelName(): string;
 
     /**
-     * @return \Illuminate\Database\Eloquent\Model|\Uiibevy\Core\Concerns\ServiceableModelContract
+     * @return \Illuminate\Database\Eloquent\Model|\Uiibevy\Core\Contracts\ServiceableModelContract
      */
     public function newModelInstance(): Model|ServiceableModelContract;
 
@@ -26,7 +26,7 @@ interface ServiceContract
     /**
      * @param int|string $id
      *
-     * @return \Illuminate\Database\Eloquent\Model|\Uiibevy\Core\Concerns\ServiceableModelContract|null
+     * @return \Illuminate\Database\Eloquent\Model|\Uiibevy\Core\Contracts\ServiceableModelContract|null
      */
     public function find(int|string $id): Model|ServiceableModelContract|null;
 
@@ -45,7 +45,7 @@ interface ServiceContract
     /**
      * @param array $attributes
      *
-     * @return \Illuminate\Database\Eloquent\Model|\Uiibevy\Core\Concerns\ServiceableModelContract|null
+     * @return \Illuminate\Database\Eloquent\Model|\Uiibevy\Core\Contracts\ServiceableModelContract|null
      */
     public function create(array $attributes): Model|ServiceableModelContract|null;
 
@@ -53,7 +53,7 @@ interface ServiceContract
      * @param int|string $id
      * @param array      $attributes
      *
-     * @return \Illuminate\Database\Eloquent\Model|\Uiibevy\Core\Concerns\ServiceableModelContract|null
+     * @return \Illuminate\Database\Eloquent\Model|\Uiibevy\Core\Contracts\ServiceableModelContract|null
      */
     public function update(int|string $id, array $attributes): Model|ServiceableModelContract|null;
 

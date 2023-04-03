@@ -1,6 +1,6 @@
 <?php
 
-namespace Uiibevy\Core\Concerns;
+namespace Uiibevy\Core\Contracts;
 
 interface ServiceableModelContract
 {
